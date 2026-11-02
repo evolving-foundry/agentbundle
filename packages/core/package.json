@@ -1,0 +1,32 @@
+{
+  "name": "agent-bundle-core",
+  "description": "Agent Bundle orchestration library: validate a bundle directory, compute its content digest, materialize an isolated ephemeral Harness home, and delegate native installs to the harness CLI through a required spawn seam",
+  "version": "0.5.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "pnpm run build"
+  },
+  "dependencies": {
+    "yaml": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.0",
+    "typescript": "^6.0.3"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "agent-bundle",
+  "description": "Unified Agent Bundle CLI: verify, install, and uninstall harness candidate bundles (v1: dsh-agent-bundle)",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "agent-bundle": "dist/bin.mjs"
+  },
+  "main": "dist/bin.mjs",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-cli.mjs"
+  },
+  "dependencies": {
+    "agent-bundle-core": "workspace:*",
+    "commander": "^15.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.0",
+    "typescript": "^6.0.3"
+  }
+}

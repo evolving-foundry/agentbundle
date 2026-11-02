@@ -1,0 +1,27 @@
+{
+  "name": "agentbundle-workspace",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "agent-bundle": "./packages/cli/dist/bin.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "prepare": "pnpm build",
+    "build": "pnpm -r build",
+    "test": "vitest run --config vitest.config.ts",
+    "test:e2e": "vitest run --config vitest.e2e.config.ts",
+    "verify:pi": "node scripts/verify-pi.mjs",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@types/node": "^22.20.0",
+    "@rollup/wasm-node": "^4.63.5",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  },
+  "packageManager": "pnpm@11.22.0"
+}

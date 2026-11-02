@@ -18,14 +18,14 @@ Bundles target a specific harness; adapters do not translate agents between runt
 
 ## Supported harnesses
 
-| Harness | Manifest `kind` | Adapter behavior |
-| --- | --- | --- |
-| DSH | `dsh-agent-bundle` | Installs native plugins and profile settings. |
-| Dify | `dify-agent-bundle` | Imports workflow DSL through the Dify Console API; requires a running service and Console credentials. |
-| Pi | `pi-agent-bundle` | Maps instructions, skills, extensions, and settings. Use `harness.name: pi`. |
-| Hermes | `hermes-agent-bundle` | Copies and enables directory plugins and writes model selection. |
-| deepagents | `deepagents-agent-bundle` | Creates an isolated Python environment and installs bundle packages in editable mode; requires uv or Python ≥ 3.11. |
-| jiuwenswarm | `jiuwenswarm-agent-bundle` | Materializes templates, skills, packages, and configuration in an isolated data root. |
+| Harness | Manifest `kind` | Adapter behavior | Details |
+| --- | --- | --- | --- |
+| DSH | `dsh-agent-bundle` | Installs native plugins and profile settings. | [Format guide](./docs/bundle-formats.md#dsh) |
+| Dify | `dify-agent-bundle` | Imports workflow DSL through the Dify Console API; requires a running service and Console credentials. | [Format guide](./docs/bundle-formats.md#dify) |
+| Pi | `pi-agent-bundle` | Maps instructions, skills, extensions, and settings. Use `harness.name: pi`. | [Format guide](./docs/bundle-formats.md#pi) |
+| Hermes | `hermes-agent-bundle` | Copies and enables directory plugins and writes model selection. | [Format guide](./docs/bundle-formats.md#hermes) |
+| deepagents | `deepagents-agent-bundle` | Creates an isolated Python environment and installs bundle packages in editable mode; requires uv or Python ≥ 3.11. | [Format guide](./docs/bundle-formats.md#deepagents) |
+| jiuwenswarm | `jiuwenswarm-agent-bundle` | Materializes templates, skills, packages, and configuration in an isolated data root. | [Format guide](./docs/bundle-formats.md#jiuwenswarm) |
 
 ## Get started
 
@@ -34,12 +34,7 @@ Requires Node.js ≥ 22 and pnpm (version pinned in `package.json`). From the re
 ```bash
 pnpm install
 pnpm build
-node packages/cli/dist/bin.mjs --help
-```
 
-Use `node packages/cli/dist/bin.mjs` in place of `agent-bundle` below, or install the built CLI globally:
-
-```bash
 cd packages/cli
 pnpm add -g .
 ```

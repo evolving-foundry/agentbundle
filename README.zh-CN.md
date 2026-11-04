@@ -99,3 +99,7 @@ pnpm test:e2e
 真实运行时 e2e 在缺少前提条件时自动跳过。通过 `AGENT_BUNDLE_DSH_REPO`、`AGENT_BUNDLE_PI_REPO`、`AGENT_BUNDLE_LANGGRAPH_REPO`、`AGENT_BUNDLE_JIUWENSWARM_REPO` 指定外部夹具仓库。默认使用用户主目录下的 `Example-DSH`、`Pi`、`Example-LangGraph`、`Example-Jiuwenswarm`。夹具名称需与测试一致，包括 `bundles/pi`、`bundles/example-jw`。
 
 **Pi 迁移提示：**旧版带品牌名称的 manifest 需要将 `harness.name` 改为 `pi`。外部夹具的包名、路径、命令断言也需要对齐测试中的中性名称。内容改名会改变 digest，应重新校验并安装。
+
+## 开源许可
+
+本项目采用 [Apache License 2.0 许可证](LICENSE)。

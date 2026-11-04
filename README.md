@@ -94,3 +94,7 @@ pnpm test:e2e
 Real-runtime e2e tests skip when prerequisites are missing. External fixture repositories can be configured through `AGENT_BUNDLE_DSH_REPO`, `AGENT_BUNDLE_PI_REPO`, `AGENT_BUNDLE_LANGGRAPH_REPO`, and `AGENT_BUNDLE_JIUWENSWARM_REPO`. Default checkout directories under the user home are `Example-DSH`, `Pi`, `Example-LangGraph`, and `Example-Jiuwenswarm`. Fixture names must match the tests, including `bundles/pi` and `bundles/example-jw`.
 
 **Pi migration:** older branded manifests must change `harness.name` to `pi`. External fixture package names, paths, and command expectations must match the neutral names in the tests. Renaming content changes its digest; verify and reinstall the updated bundle.
+
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).

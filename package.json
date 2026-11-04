@@ -1,6 +1,7 @@
 {
   "name": "agentbundle-workspace",
   "private": true,
+  "license": "Apache-2.0",
   "type": "module",
   "bin": {
     "agent-bundle": "./packages/cli/dist/bin.mjs"
